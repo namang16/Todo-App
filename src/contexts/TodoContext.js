@@ -5,4 +5,5 @@ export const TodoContext = React.createContext({
   addNewTodo: () => {},
   markCompleteTodo: () => {},
   deleteTodo: () => {},
+  deleteAllTodo: () => {}
 });

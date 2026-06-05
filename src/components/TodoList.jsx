@@ -6,7 +6,7 @@ function TodoList() {
   const { todos, markCompleteTodo, deleteTodo } = useContext(TodoContext);
 
   return (
-    <div className="flex flex-col items-center mt-5">
+    <div className="flex flex-col items-center mt-5 mx-3">
       {todos.map((t) => (
         <TodoItem
           key={t.id}

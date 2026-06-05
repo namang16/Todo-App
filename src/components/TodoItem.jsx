@@ -3,7 +3,7 @@ import React from "react";
 function TodoItem({ todo, markCompleteTodo, deleteTodo }) {
   return (
     <div
-      className={`flex justify-between items-center mb-4 border-2 border-white bg-white rounded-xl shadow-xl p-3 mr-2 w-2xl transition-opacity duration-300 ${todo.completed ? "opacity-60" : ""}`}
+      className={`flex justify-between items-center mb-4 border-2 border-white bg-white rounded-xl shadow-xl p-3 mr-2 max-w-2xl w-full transition-opacity duration-300 ${todo.completed ? "opacity-60" : ""}`}
     >
       <div className={`flex items-center`}>
         <label class="flex items-center cursor-pointer">
@@ -34,7 +34,7 @@ function TodoItem({ todo, markCompleteTodo, deleteTodo }) {
         </label>
 
         <span
-          className={`pl-4 todo-complete ${todo.completed ? "line-through" : ""}`}
+          className={`pl-4 word-break ${todo.completed ? "line-through" : ""}`}
         >
           {todo.todo}
         </span>

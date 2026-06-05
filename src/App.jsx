@@ -8,8 +8,8 @@ function App() {
   const addNewTodo = useCallback(
     (todo) =>
       setTodos((prevTodos) => [
-        ...prevTodos,
         { todo, id: Date.now(), completed: false },
+        ...prevTodos
       ]),
     [],
   );
@@ -32,10 +32,11 @@ function App() {
       ),
     [],
   );
+  const deleteAllTodo = useCallback(() => setTodos([]), []);
 
   return (
     <>
-      <TodoContext.Provider value={{ todos, addNewTodo, markCompleteTodo, deleteTodo }}>
+      <TodoContext.Provider value={{ todos, addNewTodo, markCompleteTodo, deleteTodo, deleteAllTodo }}>
         <Header />
         <AddTodo />
         <TodoList />
