@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+body {
+    background-color: #e4ffe0
+}
+
+.check-path {
+  stroke-dasharray: 24;
+  stroke-dashoffset: 24;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.peer:checked ~ div .check-path {
+  stroke-dashoffset: 0;
+}
